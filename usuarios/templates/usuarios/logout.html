@@ -1,0 +1,14 @@
+{% extends 'investimentos/base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+<body style="background-color: lightsteelblue;">
+    
+    <div class="container">
+        <h1 style="padding-top: 20px; padding-bottom: 10px;">Você está fora do sistema</h1>
+        <form method='POST'>
+            {% csrf_token %}
+        </form>
+        <a  href="{% url 'login' %}">Fazer login novamente</a>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'investimentos/base.html' %}
+{% block conteudo %}
+<body style="background-color: red; opacity: 100%;">
+    
+    <div class="container" >
+        <h1 style="padding-top: 20px; align-items: center; font: bold;"> <strong>Você não tem permissão!</strong> </h1>
+        <h2 style="padding-top: 10px; padding-bottom: 30PX;">Faça o login para prosseguir</h2>
+        <button class="btn btn-success"> <a style="color: black;" href="{% url 'login' %}">Entrar</a></button>
+        <form method='POST'>
+            {% csrf_token %}
+        </form>
+    </div>
+</body>
+{% endblock %}

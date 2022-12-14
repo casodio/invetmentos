@@ -1,0 +1,17 @@
+{% extends 'investimentos/base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+<body style="background-color: lightsteelblue;">
+    
+    <div class="container" style="padding: 30px;">
+        <h1>Login</h1><hr>
+        <form method='POST'>
+            {% csrf_token %}
+            {{ form | crispy }}
+            
+            <button class="btn btn-primary" type="submit" style="margin-top: 2%; margin-bottom: 2; color: black;">Entrar</button>
+        </form>
+        <a style="color: black;" href="{% url 'usuarionovo' %}">Ainda não é menbro? Cadastre-se</a>
+    </div>
+</body>
+{% endblock %}
